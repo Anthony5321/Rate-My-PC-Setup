@@ -1,0 +1,38 @@
+[
+    {
+      "backdrop_path": "https://imgur.com/a/7rs7L8p",
+      "id": 1,
+      "title": "ALIENWARE AURORA RYZEN™ EDITION R14 GAMING DESKTOP",
+      "CPU": "AMD Ryzen™ 5 5600X (35 MB total cache, 6 cores, 12 threads, up to 4.60 GHz Max Boost Clock)",
+      "GPU": "AMD® Radeon™ RX 6500 XT, 4 GB GDDR6",
+      "memory": "16GB, 2x8GB, DDR4, 3200MHz, XMP",
+      "storage": "512 GB, M.2, PCIe NVMe, SSD",
+      "power and cooling": "Dark side of the Moon 460W Bronze Rated Power Supply, Air-Cooled Processor and Solid Side Panel",
+      "price": "$1,509.99",
+      "release_date": "October 27, 2021"
+    },
+    {
+        "backdrop_path": "https://imgur.com/Eapuvma",
+        "id": 2,
+        "title": "INFINITY XLC GAMING PC",
+        "CPU": "Intel® Core™ Processor i9-13900K 8P/16 + 16E 3.00GHz [Turbo 5.7GHz] 36MB Cache LGA1700",
+        "GPU": "GeForce RTX™ 4070 Ti 12GB GDDR6X Video Card (Ada Lovelace) [VR Ready] (Single Card)",
+        "memory": "16GB (16GBx1) DDR5/6000MHz Dual Channel Memory (Team T-Delta RGB)",
+        "storage": "1TB WD Black SN750SE PCIe Gen 4 SSD + 4TB SATA III Hard Drive Combo (Combo Drive)",
+        "power and cooling": "850 Watts - High Power 850W 80+ GOLD ATX 3.0 Ready, CyberPowerPC DEEPCOOL Castle 240EX ARGB 240mm AIO Liquid CPU Cooling System w/ Copper Cold Plate (2 x Standard 120MM Fans)",
+        "price": "$2,489.99",
+        "release_date": "January 7, 2023"
+      },
+      {
+        "backdrop_path": "https://imgur.com/gp0Yz83",
+        "id": 3,
+        "title": "Digital Storm Lumos",
+        "CPU": "Intel Core i5-13600KF (5.1 GHz Turbo) (20-Thread) (14-Core) 3.5 GHz (Raptor Lake)",
+        "GPU": "1x GeForce GTX 1650 4GB",
+        "memory": "16GB DDR4 3200MHz Digital Storm Performance Series",
+        "storage": "1x SSD M.2 (500GB Digital Storm M.2 Performance Series) (NVM Express)",
+        "power and cooling": "700W Digital Storm Performance Series, H20: Stage 1: Digital Storm Vortex Liquid CPU Cooler (Single Fan)",
+        "price": "$1,511.99",
+        "release_date": "October 11, 2017"
+      }
+]

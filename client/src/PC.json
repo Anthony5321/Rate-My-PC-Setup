@@ -1,6 +1,6 @@
 [
     {
-      "backdrop_path": "https://imgur.com/a/7rs7L8p",
+      "backdrop_path": "https://i.imgur.com/fpzAuvq.jpg",
       "id": 1,
       "title": "ALIENWARE AURORA RYZEN™ EDITION R14 GAMING DESKTOP",
       "CPU": "AMD Ryzen™ 5 5600X (35 MB total cache, 6 cores, 12 threads, up to 4.60 GHz Max Boost Clock)",
@@ -12,7 +12,7 @@
       "release_date": "October 27, 2021"
     },
     {
-        "backdrop_path": "https://imgur.com/Eapuvma",
+        "backdrop_path": "https://i.imgur.com/Eapuvma.jpg",
         "id": 2,
         "title": "INFINITY XLC GAMING PC",
         "CPU": "Intel® Core™ Processor i9-13900K 8P/16 + 16E 3.00GHz [Turbo 5.7GHz] 36MB Cache LGA1700",
@@ -24,7 +24,7 @@
         "release_date": "January 7, 2023"
       },
       {
-        "backdrop_path": "https://imgur.com/gp0Yz83",
+        "backdrop_path": "https://i.imgur.com/gp0Yz83.jpg",
         "id": 3,
         "title": "Digital Storm Lumos",
         "CPU": "Intel Core i5-13600KF (5.1 GHz Turbo) (20-Thread) (14-Core) 3.5 GHz (Raptor Lake)",

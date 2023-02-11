@@ -2,7 +2,7 @@ const express = require('express');
 const routes = require('./routes');
 const db = require('./db');
 const logger = require('morgan');
-
+const cors = require('cors')
  
 // require() imports and middleware here ^ ///////
 
@@ -10,6 +10,8 @@ const logger = require('morgan');
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+
+app.use(cors())
 
 app.use(express.json())
 

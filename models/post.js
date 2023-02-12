@@ -3,9 +3,9 @@ const Schema = mongoose.Schema
 
 const Post = new Schema(
     {
-        Review: { type: String, required: true },
-        Rating: { type: String, required: true },
-        Name: { type: String, required: true },
+        review: { type: String, required: true },
+        rating: { type: String, required: true },
+        name: { type: String, required: true },
     },
     { timestamps: true },
 )

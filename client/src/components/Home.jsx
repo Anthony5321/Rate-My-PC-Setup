@@ -1,9 +1,9 @@
 import '../App.css'
-import PCCard from './PCCard'
 import PCArray from '../PC.json'
 import { Link } from "react-router-dom"
 
-console.log(PCArray)
+
+
 const Home = () => {
 
       return(
@@ -11,16 +11,16 @@ const Home = () => {
             <h2>PC Builds</h2>
             <section className="container-grid">
             {
-              <div key={PCArray.id}>
-                <Link to={`/view/${PCArray.id}`}>
-                <PCCard
-                image={PCArray.backdrop_path}/>
+              PCArray.map((PC) => (
+              <div key={PC.id}>
+                <Link to={`/${PC.id}`}>
+                <img src={PC.backdrop_path} alt={PC.title}/>
                 </Link>
               </div>
-    }
+    ))}
             </section>
           </div>
       )
     }
-    
+
     export default Home

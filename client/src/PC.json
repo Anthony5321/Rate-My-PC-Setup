@@ -19,7 +19,7 @@
         "GPU": "GeForce RTX™ 4070 Ti 12GB GDDR6X Video Card (Ada Lovelace) [VR Ready] (Single Card)",
         "memory": "16GB (16GBx1) DDR5/6000MHz Dual Channel Memory (Team T-Delta RGB)",
         "storage": "1TB WD Black SN750SE PCIe Gen 4 SSD + 4TB SATA III Hard Drive Combo (Combo Drive)",
-        "power and cooling": "850 Watts - High Power 850W 80+ GOLD ATX 3.0 Ready, CyberPowerPC DEEPCOOL Castle 240EX ARGB 240mm AIO Liquid CPU Cooling System w/ Copper Cold Plate (2 x Standard 120MM Fans)",
+        "powerAndCooling": "850 Watts - High Power 850W 80+ GOLD ATX 3.0 Ready, CyberPowerPC DEEPCOOL Castle 240EX ARGB 240mm AIO Liquid CPU Cooling System w/ Copper Cold Plate (2 x Standard 120MM Fans)",
         "price": "$2,489.99",
         "release_date": "January 7, 2023"
       },

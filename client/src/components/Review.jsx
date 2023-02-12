@@ -1,6 +1,6 @@
 
 
-const PCCard = () => {
+const Review = () => {
 
     const PCArray = '../PC.json'
 
@@ -19,4 +19,4 @@ return (
 )}
 
   
-  export default PCCard
+  export default Review

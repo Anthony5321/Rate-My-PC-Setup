@@ -1,4 +1,5 @@
 const Post = require('../models/post');
+const Pc = require('../models/pc');
 
 const createPost = async (req, res) => {
     console.log(req.body)
@@ -7,6 +8,7 @@ const createPost = async (req, res) => {
         await post.save()
         return res.status(201).json({
             post,
+            pcId
         });
     } catch (error) {
         return res.status(500).json({ error: error.message })
@@ -22,6 +24,15 @@ const getAllPosts = async (req, res) => {
     }
 }
 
+const getAllPcs = async (req, res) => {
+    try {
+        const pcs = await Pc.find()
+        return res.status(200).json({ pcs })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
 const getPostById = async (req, res) => {
     try {
         const { id } = req.params;
@@ -30,6 +41,19 @@ const getPostById = async (req, res) => {
             return res.status(200).json({ post });
         }
         return res.status(404).send('Post with the specified ID does not exists');
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
+const getPcById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const pc = await Pc.findById(id)
+        if (pc) {
+            return res.status(200).json({ pc });
+        }
+        return res.status(404).send('Pc with the specified ID does not exists');
     } catch (error) {
         return res.status(500).send(error.message);
     }
@@ -62,5 +86,7 @@ module.exports = {
     getPostById,
     updatePost,
     deletePost,
-    getAllPosts
+    getAllPosts,
+    getAllPcs,
+    getPcById
 }

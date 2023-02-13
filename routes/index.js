@@ -5,9 +5,12 @@ const controllers = require('../controllers')
 const router = Router();
 
 
-router.get('/', (req, res) => res.send('This is root!'))
 
-router.get(`/1`, controllers.getAllPosts)
+// router.get('/', (req, res) => res.send('This is root!'))
+
+router.get(`/`, controllers.getAllPcs)
+
+router.get(`/pc/:id`, controllers.getPcById)
 
 router.post('/post', controllers.createPost)
 

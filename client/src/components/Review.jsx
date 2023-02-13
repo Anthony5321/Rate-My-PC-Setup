@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-const PC = require('../PC.json')
+// console.log(PC)
 //create form state, create handle change, spread opp, line 8 send state name.
-const Review = () => {
+const Review = ({pcId}) => {
   const cleanPost = {
     review: '',
     rating: '',
@@ -12,20 +12,19 @@ const Review = () => {
   const [oldPost, setOldPost] = useState([])
   const [newPost, setNewPost] = useState(cleanPost)
 
-      // const getPosts = async () => {
-      //   try {
-      //     let res = await axios.get(`http://localhost:3001/api/1`)
-      //     setOldPost(res.data)
-      //     console.log(res)
-      //   } catch (err) {
-      //     console.log(err)
-      //   }
+      const getPosts = async () => {
+        try {
+          let res = await axios.get(`http://localhost:3001/api/${pcId}`)
+          setOldPost(res.data)
+          console.log(res)
+        } catch (err) {
+          console.log(err)
+        }
         
-      // }
-      // useEffect((e) => {
-      //   getPosts()
-      //   setOldPost({...oldPost, [e.target.name]: e.target.value})
-      // },[])
+      }
+      useEffect((e) => {
+        getPosts()
+      },[])
     
 
       const handleSubmit = async (e) => {
@@ -39,7 +38,7 @@ const Review = () => {
         } 
       }
       const handleChange = (e) => {
-        setNewPost({...newPost, [e.target.name]: e.target.value})
+        setNewPost({...newPost, [e.target.name]: e.target.value, pcId})
       }
     
 return (
@@ -50,17 +49,17 @@ return (
         <h1>Add a comment</h1>
         <form onSubmit={ handleSubmit }>
         <input type="text" onChange={handleChange} value={newPost.review} name={"review"}  placeholder={'Review'} />
-        <input type="text" onChange={handleChange} value={newPost.rating} name={"rating"} placeholder={'Rating'} />
-        <input type="text" onChange={handleChange} value={newPost.name} name={"name"} placeholder={'name'} />
+        <input type="text" onChange={handleChange} value={newPost.rating} name={"rating"} placeholder={'Rating out of 10'} />
+        <input type="text" onChange={handleChange} value={newPost.name} name={"name"} placeholder={'Name'} />
         <button>Submit</button>
         </form>
-        {/* {oldPost.map((old) => ( */}
-        <div key={oldPost._id}>
-          {/* <h3>Review: {oldPost.}</h3> */}
-          {/* <p>Rating: {old}</p>
-          <p>Name: {old}</p> */}
+        {oldPost?.posts?.map((old) => (
+        <div key={old._id}>
+          <h3>Review: {old.review}</h3>
+           <p>Rating: {old.rating}</p>
+          <p>Name: {old.name}</p>
           </div>
-                {/* ))} */}
+           ))} 
       </div>
 </div>
 

@@ -1,19 +1,34 @@
 import '../App.css'
-import PCArray from '../PC.json'
 import { Link } from "react-router-dom"
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+
 
 
 
 const Home = () => {
+const [pcs, setPcs] = useState([])
 
+const getPcs = async (e) => {
+  try {
+    let response = await axios.get('http://localhost:3001/api/')
+    setPcs(response.data.pcs);
+    console.log(response.data.pcs);
+  } catch (error) {
+    console.log(error)
+  }
+}
+useEffect(() => {
+  getPcs()
+},[])
       return(
           <div className="PCs">
             <h2>PC Builds</h2>
             <section className="container-grid">
             {
-              PCArray.map((PC) => (
-              <div key={PC.id}>
-                <Link to={`/${PC.id}`}>
+              pcs.map((PC) => (
+              <div key={PC._id}>
+                <Link to={`/${PC._id}`}>
                 <img src={PC.backdrop_path} alt={PC.title}/>
                 </Link>
               </div>

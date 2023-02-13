@@ -1,4 +1,4 @@
-import PCArray from '../PC.json'
+
 // import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
@@ -10,35 +10,45 @@ const PCInfo = () => {
 
   let { id } = useParams()
 
-  const [PC, setPC] = useState('')
+  const [pc, setPC] = useState('')
+
+  const getPcs = async (e) => {
+    try {
+      let response = await axios.get(`http://localhost:3001/api/pc/${id}`)
+      setPC(response.data.pc);
+      console.log(response);
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   useEffect(() => {
-    let selectedPC = PCArray.find(
-      (PC) => PC.id === parseInt(id)
-    )
-    setPC(selectedPC)
+    getPcs()
   }, [id])
 
 
-  return PC ?(
+  return pc ?(
     <div className="PCs">
       <h2>PC Builds</h2>
       <section className="container-grid">
       {
-        <div key={PC.id}>
-          <img src={PC.backdrop_path} alt="" />
-          <h1>{PC.title}</h1>
-          <h1>CPU: {PC.CPU}</h1>
-          <h1>GPU: {PC.GPU}</h1>
-          <h1>Memory: {PC.memory}</h1>
-          <h1>Power and Cooling: {PC.powerAndCooling}</h1>
-          <h1>Price: {PC.price}</h1>
-          <h1>Release date: {PC.release_date}</h1>
-          <h1>Storage: {PC.storage}</h1>
+
+        <div key={pc.id}>
+          <img src={pc.backdrop_path} alt="" />
+          <h1>{pc.title}</h1>
+          <h1>CPU: {pc.CPU}</h1>
+          <h1>GPU: {pc.GPU}</h1>
+          <h1>Memory: {pc.memory}</h1>
+          <h1>Storage: {pc.storage}</h1>
+          <h1>Power and Cooling: {pc.powerAndCooling}</h1>
+          <h1>Price: {pc.price}</h1>
+          <h1>Release date: {pc.release_date}</h1>
         </div>
 }
       </section>
-      <Review/>
+      <Review 
+      pcId={pc._id}
+      />
     </div>
 ) : null
 }

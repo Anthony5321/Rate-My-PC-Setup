@@ -12,6 +12,8 @@ router.get(`/`, controllers.getAllPcs)
 
 router.get(`/pc/:id`, controllers.getPcById)
 
+router.get(`/pc/post/:id`, controllers.getPostByPcId)
+
 router.post('/post', controllers.createPost)
 
 router.get('/post/:id', controllers.getPostById)

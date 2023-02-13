@@ -8,7 +8,7 @@ import axios from 'axios'
 
 const PCInfo = () => {
 
-  let { id } = useParams()
+  const { id } = useParams()
 
   const [pc, setPC] = useState('')
 
@@ -47,7 +47,7 @@ const PCInfo = () => {
 }
       </section>
       <Review 
-      pcId={pc._id}
+      pcId={id}
       />
     </div>
 ) : null

@@ -14,7 +14,7 @@ const Review = ({pcId}) => {
 
       const getPosts = async () => {
         try {
-          let res = await axios.get(`http://localhost:3001/api/${pcId}`)
+          const res = await axios.get(`http://localhost:3001/api/pc/post/${pcId}`)
           setOldPost(res.data)
           console.log(res)
         } catch (err) {
@@ -30,7 +30,7 @@ const Review = ({pcId}) => {
       const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-          let response = await axios.post(`http://localhost:3001/api/post`, newPost)
+          const response = await axios.post(`http://localhost:3001/api/post`, newPost)
           setNewPost(cleanPost)
           console.log(response)
         } catch (error) {
@@ -38,7 +38,7 @@ const Review = ({pcId}) => {
         } 
       }
       const handleChange = (e) => {
-        setNewPost({...newPost, [e.target.name]: e.target.value, pcId})
+        setNewPost({...newPost, pcId: pcId, [e.target.name]: e.target.value})
       }
     
 return (

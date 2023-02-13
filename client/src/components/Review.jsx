@@ -16,7 +16,8 @@ const Review = ({pcId}) => {
         try {
           const res = await axios.get(`http://localhost:3001/api/pc/post/${pcId}`)
           setOldPost(res.data)
-          console.log(res)
+          console.log(oldPost);
+          // console.log(res)
         } catch (err) {
           console.log(err)
         }
@@ -60,7 +61,7 @@ return (
         <input type="text" onChange={handleChange} value={newPost.name} name={"name"} placeholder={'Name'} />
         <button>Submit</button>
         </form>
-        {oldPost?.post?.sort((a,b) => b.createdAt - a.createdAt).map((old) => (
+        {oldPost?.post?.map((old) => (
         <div key={old._id}>
           <h3>Review: {old.review}</h3>
            <p>Rating: {old.rating}</p>

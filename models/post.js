@@ -6,7 +6,7 @@ const Post = new Schema(
         review: { type: String, required: true },
         rating: { type: String, required: true },
         name: { type: String, required: true },
-        pcId: { type: Schema.Types.ObjectId, ref: 'pc'}
+        pcId: { type: Schema.Types.ObjectId, ref: 'pc', required: true}
     },
     { timestamps: true },
 )

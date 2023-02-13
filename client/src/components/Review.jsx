@@ -30,16 +30,23 @@ const Review = ({pcId}) => {
       const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-          const response = await axios.post(`http://localhost:3001/api/post`, newPost)
+          const createNewPost = {...newPost, pcId: pcId}
+          const response = await axios.post(`http://localhost:3001/api/post`, createNewPost)
           setNewPost(cleanPost)
           console.log(response)
+          getPosts()
         } catch (error) {
           console.log(error)
         } 
       }
       const handleChange = (e) => {
-        setNewPost({...newPost, pcId: pcId, [e.target.name]: e.target.value})
+        setNewPost({...newPost, [e.target.name]: e.target.value})
       }
+
+const handleRemove = async (id) => {
+await axios.delete(`http://localhost:3001/api/post/delete/${oldPost}`)
+console.log(oldPost);
+}
     
 return (
 
@@ -53,11 +60,14 @@ return (
         <input type="text" onChange={handleChange} value={newPost.name} name={"name"} placeholder={'Name'} />
         <button>Submit</button>
         </form>
-        {oldPost?.posts?.map((old) => (
+        {oldPost?.post?.sort((a,b) => b.createdAt - a.createdAt).map((old) => (
         <div key={old._id}>
           <h3>Review: {old.review}</h3>
            <p>Rating: {old.rating}</p>
           <p>Name: {old.name}</p>
+          <p>{old.createdAt}</p>
+       <button onClick={handleRemove}>remove</button>
+
           </div>
            ))} 
       </div>

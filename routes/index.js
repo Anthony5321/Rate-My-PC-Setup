@@ -20,6 +20,6 @@ router.get('/post/:id', controllers.getPostById)
 
 router.put('/post/:id', controllers.updatePost)
 
-router.delete('/post/:id', controllers.deletePost)
+router.delete('/post/delete/:id', controllers.deletePost)
 
 module.exports = router;

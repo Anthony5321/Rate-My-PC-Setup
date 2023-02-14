@@ -72,13 +72,11 @@ const updateHandleChange = (e) => {
   setUpdatePost({...updatePost, [e.target.name]: e.target.value})
 }
 
-    
 return (
 
 <div>
   <div className="card">
     <h1>{editing ? 'Add a': "Edit"} comment</h1>
-
     { editing ? 
     (
       <form onSubmit={ handleSubmit }>
@@ -94,7 +92,6 @@ return (
         <button >Submit</button>
       </form>
     ): (
-
       <form onSubmit={ handleUpdate }>
         <input type="text" onChange={updateHandleChange} value={updatePost?.review} name={"review"}  placeholder={'Review'} />
         <select name='rating' id="rating" value={updatePost?.rating} onChange={updateHandleChange}>
@@ -107,9 +104,8 @@ return (
         <input type="text" onChange={updateHandleChange} value={updatePost?.name} name={"name"} placeholder={'Name'} />
         <button >Edit</button>
       </form>
-    )
-}
-
+      )
+    }
     {post?.post?.sort((a,b) => new Date(b.createdAt) - new Date(a.createdAt)).map((post) => (
       <div key={post._id}>
         <h3>Review: {post.review}</h3>
@@ -121,8 +117,6 @@ return (
       ))} 
   </div>
 </div>
-
 )}
 
-  
   export default Review

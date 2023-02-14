@@ -18,8 +18,9 @@ router.post('/post', controllers.createPost)
 
 router.get('/post/:id', controllers.getPostById)
 
-router.put('/post/:id', controllers.updatePost)
+router.put('/pc/post/:id/:id', controllers.updatePost)
 
-router.delete('/post/delete/:id', controllers.deletePost)
+router.delete('/pc/post/:id/:id', controllers.deletePost)
+
 
 module.exports = router;

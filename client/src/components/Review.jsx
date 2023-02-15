@@ -1,8 +1,5 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-// console.log(PC)
-//create form state, create handle change, spread opp, line 8 send state name.
 const Review = ({pcId}) => {
   const cleanPost = {
     review: '',
@@ -19,7 +16,7 @@ const [editing, setEditing] = useState(true)
 
       const getPosts = async () => {
         try {
-          const res = await axios.get(`http://localhost:3001/api/pc/post/${pcId}`)
+          const res = await axios.get(`/api/pc/post/${pcId}`)
           setPost(res.data)
           console.log(post);
           console.log(res)
@@ -37,7 +34,7 @@ const [editing, setEditing] = useState(true)
         e.preventDefault()
         try {
           const createNewPost = {...formValues, pcId: pcId}
-          const response = await axios.post(`http://localhost:3001/api/post`, createNewPost)
+          const response = await axios.post(`/api/post`, createNewPost)
           setFormValues(cleanPost)
           console.log(response)
           getPosts()
@@ -51,13 +48,13 @@ const [editing, setEditing] = useState(true)
 
 const handleRemove = async (id) => {
   console.log(post);
-await axios.delete(`http://localhost:3001/api/pc/post/${pcId}/${id}`)
+await axios.delete(`/api/pc/post/${pcId}/${id}`)
 getPosts()
 }
 
 const handleUpdate =  async (e) => {
   e.preventDefault()
- await axios.put(`http://localhost:3001/api/pc/post/${pcId}/${commentId}`, updatePost)
+ await axios.put(`/api/pc/post/${pcId}/${commentId}`, updatePost)
 setEditing(true)
 getPosts()
 }

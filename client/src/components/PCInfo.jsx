@@ -14,7 +14,7 @@ const PCInfo = () => {
 
   const getPcs = async (e) => {
     try {
-      let response = await axios.get(`http://localhost:3001/api/pc/${id}`)
+      let response = await axios.get(`/api/pc/${id}`)
       setPC(response.data.pc);
       console.log(response);
     } catch (error) {

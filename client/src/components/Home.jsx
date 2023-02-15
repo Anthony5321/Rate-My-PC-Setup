@@ -11,7 +11,7 @@ const [pcs, setPcs] = useState([])
 
 const getPcs = async (e) => {
   try {
-    let response = await axios.get('http://localhost:3001/api/')
+    let response = await axios.get('/api/')
     setPcs(response.data.pcs);
     console.log(response.data.pcs);
   } catch (error) {

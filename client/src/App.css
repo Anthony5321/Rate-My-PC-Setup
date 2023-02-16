@@ -36,6 +36,7 @@ height: 380px;
   cursor: pointer;
   transition: all 0.2s;
   margin-top: 5%;
+  background-color: white;
 }
 
 .home-img:hover {
@@ -58,6 +59,7 @@ height: 380px;
 }
 
 .info-img {
+  background-color: white;
   border-radius: 5%;
   width: 300px;
   height: 380px;

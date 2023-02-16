@@ -103,7 +103,7 @@ const main = async () => {
             release_date: "February 10, 2023"
           },
           {
-            backdrop_path: "https://i.imgur.com/o84hgY7.jpg",
+            backdrop_path: "https://i.imgur.com/Udm29um.png",
             id: 9,
             title: "X-10 Ultimate",
             CPU: "  INTEL CORE i9 13900K 24C 5.4GHZ ",

@@ -1,62 +1,59 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import '../App.css'
+
 const Review = ({pcId}) => {
   const cleanPost = {
     review: '',
     rating: '3',
     name: '',
   }
-  
-  // const [oldPost, setOldPost] = useState([])
-  const [post, setPost] = useState([])
+
+const [post, setPost] = useState([])
 const [formValues, setFormValues] = useState(cleanPost)
 const [updatePost, setUpdatePost] = useState()
 const [commentId, setCommentId] = useState('')
 const [editing, setEditing] = useState(true)
 
-      const getPosts = async () => {
-        try {
-          const res = await axios.get(`/api/pc/post/${pcId}`)
-          setPost(res.data)
-          console.log(post);
-          console.log(res)
-        } catch (err) {
-          console.log(err)
-        }
-        
-      }
-      useEffect((e) => {
-        getPosts()
-      },[])
-    console.log(post);
+const getPosts = async () => {
+  try {
+    const res = await axios.get(`/api/pc/post/${pcId}`)
+    setPost(res.data)
+  } catch (err) {
+    console.log(err)
+    }
+}
 
-      const handleSubmit = async (e) => {
-        e.preventDefault()
-        try {
-          const createNewPost = {...formValues, pcId: pcId}
-          const response = await axios.post(`/api/post`, createNewPost)
-          setFormValues(cleanPost)
-          console.log(response)
-          getPosts()
-        } catch (error) {
-          console.log(error)
-        } 
-      }
-      const handleChange = (e) => {
-        setFormValues({...formValues, [e.target.name]: e.target.value})
-      }
+useEffect((e) => {
+  getPosts()
+},[])
+
+const handleSubmit = async (e) => {
+  e.preventDefault()
+  try {
+    const createNewPost = {...formValues, pcId: pcId}
+    await axios.post(`/api/post`, createNewPost)
+    setFormValues(cleanPost)
+    getPosts()
+  } catch (error) {
+    console.log(error)
+  } 
+}
+
+const handleChange = (e) => {
+  setFormValues({...formValues, [e.target.name]: e.target.value})
+}
 
 const handleRemove = async (id) => {
-  console.log(post);
-await axios.delete(`/api/pc/post/${pcId}/${id}`)
-getPosts()
+  await axios.delete(`/api/pc/post/${pcId}/${id}`)
+  getPosts()
 }
 
 const handleUpdate =  async (e) => {
   e.preventDefault()
- await axios.put(`/api/pc/post/${pcId}/${commentId}`, updatePost)
-setEditing(true)
-getPosts()
+  await axios.put(`/api/pc/post/${pcId}/${commentId}`, updatePost)
+  setEditing(true)
+  getPosts()
 }
 
 const handleEditState = (post) => {
@@ -76,8 +73,8 @@ return (
     <h1>{editing ? 'Add a': "Edit"} comment</h1>
     { editing ? 
     (
-      <form onSubmit={ handleSubmit }>
-        <input type="text" onChange={handleChange} value={formValues.review} name={"review"}  placeholder={'Review'} />
+      <form className="form"onSubmit={ handleSubmit }>
+        <textarea cols="40" rows="5" id='review' onChange={handleChange} value={formValues.review} name={"review"}  placeholder={'Review'}></textarea>
         <select name='rating' id="rating" value={formValues.rating} onChange={handleChange}>
           <option value="1">Worst PC you could buy</option>
           <option value="2">Could be Better</option>
@@ -85,7 +82,7 @@ return (
           <option value="4">Better than most</option>
           <option value="5">Best ever made</option>
         </select>
-        <input type="text" onChange={handleChange} value={formValues.name} name={"name"} placeholder={'Name'} />
+        <input type="text" onChange={handleChange} value={formValues.name} name={"name"} id='name' placeholder={'Name'} />
         <button >Submit</button>
       </form>
     ): (

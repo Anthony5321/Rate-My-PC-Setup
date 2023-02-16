@@ -6,6 +6,41 @@ header {
   text-align: left;
   font-size: x-large;
   background-color: rgb(158, 158, 158);
+  height: 70px;
+}
+
+.home-link {
+  justify-content: space-between;
+  line-height: 2.5 ;
+  float: left;
+  margin-left: 30px;
+}
+
+.about-link {
+  float: right;
+  justify-content: space-between;
+  line-height: 2.5 ;
+  margin-right: 30px;
+}
+
+.info-page {
+  text-align: center;
+}
+
+.about-link:link {
+  color: red;
+}
+
+.about-link:visited {
+  color: rgb(68, 68, 68);
+}
+
+.about-link:hover {
+  color: black;
+}
+
+.about-link:active {
+  color: gray;
 }
 
 .home-link:link {

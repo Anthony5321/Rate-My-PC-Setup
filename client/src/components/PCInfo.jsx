@@ -31,7 +31,6 @@ return pc ?(
     {
       <div key={pc.id}>
         <img className='info-img'src={pc.backdrop_path} alt="" />
-        {/* <h1>{pc.title}</h1> */}
         <h1>CPU: {pc.CPU}</h1>
         <h1>GPU: {pc.GPU}</h1>
         <h1>Memory: {pc.memory}</h1>

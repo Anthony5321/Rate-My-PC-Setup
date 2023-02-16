@@ -74,7 +74,8 @@ return (
     { editing ? 
     (
       <form className="form"onSubmit={ handleSubmit }>
-        <textarea cols="40" rows="5" id='review' onChange={handleChange} value={formValues.review} name={"review"}  placeholder={'Review'}></textarea>
+        <input type="text" onChange={handleChange} value={formValues.name} name={"name"} id='name' placeholder={'Name'} />
+        <br/>
         <select name='rating' id="rating" value={formValues.rating} onChange={handleChange}>
           <option value="1">Worst PC you could buy</option>
           <option value="2">Could be Better</option>
@@ -82,12 +83,15 @@ return (
           <option value="4">Better than most</option>
           <option value="5">Best ever made</option>
         </select>
-        <input type="text" onChange={handleChange} value={formValues.name} name={"name"} id='name' placeholder={'Name'} />
+        <br/>
+        <textarea cols="40" rows="5" id='review' onChange={handleChange} value={formValues.review} name={"review"}  placeholder={'Review'}></textarea>
+        <br/>
         <button >Submit</button>
       </form>
     ): (
       <form onSubmit={ handleUpdate }>
-        <input type="text" onChange={updateHandleChange} value={updatePost?.review} name={"review"}  placeholder={'Review'} />
+        <input type="text" onChange={updateHandleChange} value={updatePost?.name} name={"name"} id='name' placeholder={'Name'} />
+        <br/>
         <select name='rating' id="rating" value={updatePost?.rating} onChange={updateHandleChange}>
           <option value="1">Worst PC you could buy</option>
           <option value="2">Could be Better</option>
@@ -95,7 +99,9 @@ return (
           <option value="4">Better than most</option>
           <option value="5">Best ever made</option>
         </select>
-        <input type="text" onChange={updateHandleChange} value={updatePost?.name} name={"name"} placeholder={'Name'} />
+        <br/>
+        <textarea cols="40" rows="5" id='review' onChange={updateHandleChange} value={updatePost?.review} name={"review"}  placeholder={'Review'}></textarea>
+        <br/>
         <button >Edit</button>
       </form>
       )

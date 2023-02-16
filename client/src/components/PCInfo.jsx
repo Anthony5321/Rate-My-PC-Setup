@@ -38,7 +38,7 @@ return pc ?(
         <h1>Storage: {pc.storage}</h1>
         <h1>Power and Cooling: {pc.powerAndCooling}</h1>
         <h1>Price: {pc.price}</h1>
-        <h1>Release date: {pc.release_date}</h1>
+        <h1>Price Check Date: {pc.release_date}</h1>
       </div>
     }
     </section>

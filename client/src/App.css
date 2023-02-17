@@ -27,9 +27,9 @@ header {
 .info-page {
   text-align: center;
   background: linear-gradient(
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.2)
-  ), url(https://i.imgur.com/HMhbAlb.png) no-repeat center center fixed; 
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.4)
+  ), url(https://i.imgur.com/HJKwCIm.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -19,7 +19,7 @@
 
 ### ***Getting Started***
 
-##### Other things I have leaned along the way
+##### Other things I have leaned along the way is that when you need to seed from your Database to do so early and often to keep your info up to date.
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/V2PeeYi0/project-2).
 
 ##### The project has it's own ERD and Components page. This can be viewed [here](https://lucid.app/lucidchart/97f109d2-6394-4e63-9ee2-4dc6d007b9db/edit?invitationId=inv_e49ae07d-f824-4e94-93eb-3ecd6d3ce819&page=0_0#).

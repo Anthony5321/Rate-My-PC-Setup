@@ -20,7 +20,7 @@
 
 ### ***Getting Started***
 
-##### Try it on your phone. You're looking to buy a computer, you might be looking at the app on one already.
+##### Try it on your phone. You're looking to buy a computer, you might not be looking at the app on one already.
 
 ##### Things I have leaned along the way is, when you need to seed to your Database is to do so early and often to keep your info up to date.
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/V2PeeYi0/project-2).

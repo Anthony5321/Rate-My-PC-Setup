@@ -20,7 +20,9 @@
 
 ### ***Getting Started***
 
-##### Things I have leaned along the way is, when you need to seed from your Database is to do so early and often to keep your info up to date.
+##### Try it on your phone. You're looking to buy a computer, you might be looking at the app on one already.
+
+##### Things I have leaned along the way is, when you need to seed to your Database is to do so early and often to keep your info up to date.
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/V2PeeYi0/project-2).
 
 ##### The project has it's own ERD and Components page. This can be viewed [here](https://lucid.app/lucidchart/97f109d2-6394-4e63-9ee2-4dc6d007b9db/edit?invitationId=inv_e49ae07d-f824-4e94-93eb-3ecd6d3ce819&page=0_0#).
@@ -30,9 +32,9 @@
 
 ### ***Screenshots***
 
-##### image header 1
+##### 
 ![Screen Shot](https://i.imgur.com/9sn1JoF.png)
-##### image header 2
+##### 
 ![Screen Shot](https://i.imgur.com/8MEqDop.png)
 ***
 
@@ -52,7 +54,7 @@
 
 ##### Markdown Guide: [ia.net](https://ia.net/writer/support/general/markdown-guide)
 
-##### Bestbuy: For some the computer info and pictures.
+##### Bestbuy: For some of the computer info and pictures.
 
 ##### ChatAi: For all the reviews that actually make sense.
 ***

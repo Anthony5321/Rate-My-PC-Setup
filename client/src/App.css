@@ -1,12 +1,13 @@
 body {
-  background-color: rgb(146, 145, 145);
+  background-color: rgb(94, 85, 148);
+  font-family: Optima, sans-serif;
 }
 
 header {
   text-align: left;
   font-size: x-large;
-  background-color: rgb(158, 158, 158);
-  height: 70px;
+  background-image: url('https://media4.giphy.com/media/IeFnrNj0fcXG4YuCfj/giphy.gif?cid=ecf05e471sc13k226qbwneubkyxm7eaf4juknpnsybtde6ri&rid=giphy.gif&ct=g');
+  height:340px;
 }
 
 .home-link {
@@ -25,14 +26,19 @@ header {
 
 .info-page {
   text-align: center;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
+  ), url(https://i.imgur.com/HMhbAlb.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.about-link:link {
-  color: red;
-}
 
 .about-link:visited {
-  color: rgb(68, 68, 68);
+  color: rgb(252, 252, 252);
 }
 
 .about-link:hover {
@@ -40,15 +46,11 @@ header {
 }
 
 .about-link:active {
-  color: gray;
-}
-
-.home-link:link {
-  color: red;
+  color: rgb(47, 28, 134);
 }
 
 .home-link:visited {
-  color: rgb(68, 68, 68);
+  color: rgb(255, 255, 255);
 }
 
 .home-link:hover {
@@ -56,7 +58,7 @@ header {
 }
 
 .home-link:active {
-  color: gray;
+  color: rgb(47, 28, 134);
 }
 
 h2 {
@@ -64,14 +66,33 @@ h2 {
   text-align: center;
 }
 
+.title {
+  position: relative;
+  margin-top: -280px;
+  margin-bottom: 210px;
+  font-size: 80px;
+  font-weight: bolder;
+  color: white;
+}
+
+.slogan {
+  font-size: x-large;
+  font-weight: bolder;
+  color: white;
+}
+
+.home-overall {
+  margin-top: 1%;
+}
+
 .home-img {
   border-radius: 5%;
-width: 300px;
-height: 380px;
+  width: 300px;
+  height: 380px;
   cursor: pointer;
   transition: all 0.2s;
-  margin-top: 5%;
   background-color: white;
+  border: 5px solid #000000
 }
 
 .home-img:hover {
@@ -86,61 +107,64 @@ height: 380px;
   justify-content: center;
 }
 
-
 .container-page {
-  text-align: center;
-  justify-content: center;
-
-}
-
-.info-img {
-  background-color: white;
-  border-radius: 5%;
-  width: 300px;
-  height: 380px;
-}
-
-.card {
-  /* background-color: black; */
   text-align: left;
 }
 
-.form {
-min-width: 100px;
-min-height: 10px;
-overflow: auto;
-cursor: text;
+.info-img {
+  float: left;
+  background-color: white;
+  border-radius: 5%;
+  width: 400px;
+  height: 480px;
+}
 
+.pc-info {
+  border: 5px solid #000000;
+}
+
+.card {
+  text-align: left;
+  margin-left:10% ;
+  margin-top: 100px;
+}
+
+.form {
+  margin-bottom: 100px;
+  min-width: 100px;
+  min-height: 10px;
+  overflow: auto;
+  align-items: center;
+}
+
+.posts {
+  margin-left:-10% ;
 }
 
 #review {
-font-size: 120%;
-width: 140px;
-height: 30px;
-transition: all 300ms ease-in-out;
+  font-size: 120%;
+  width: 330px;
+  height: 30px;
+  transition: all 300ms ease-in-out;
 }
 
 #review:focus {
-  min-width: 220px;
-  min-height: 80px;
+  min-width: 530px;
+  min-height: 110px;
   outline: 0px;
   text-overflow: clip;
 }
 
-
-
-
-
 #rating {
   font-size: 100%;
-width: 140px;
-height: 30px;
+  width: 140px;
+  height: 30px;
 }
 
 #name {
   font-size: 100%;
-width: 190px;
-height: 24px;
+  width: 190px;
+  height: 24px;
 }
 
 button {

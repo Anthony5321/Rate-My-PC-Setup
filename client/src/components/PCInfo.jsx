@@ -27,10 +27,13 @@ useEffect(() => {
 return pc ?(
   <div className="PCs">
     <h2>{pc.title}</h2>
+    <br />
     <section className="container-page">
     {
       <div key={pc.id}>
         <img className='info-img'src={pc.backdrop_path} alt="" />
+        <br />
+        <div className='pc-info'>
         <h1>CPU: {pc.CPU}</h1>
         <h1>GPU: {pc.GPU}</h1>
         <h1>Memory: {pc.memory}</h1>
@@ -38,9 +41,13 @@ return pc ?(
         <h1>Power and Cooling: {pc.powerAndCooling}</h1>
         <h1>Price: {pc.price}</h1>
         <h1>Price Check Date: {pc.release_date}</h1>
+        </div>
       </div>
     }
     </section>
+    <br />
+    <br />
+    <br />
       <Review 
       pcId={id}
       />

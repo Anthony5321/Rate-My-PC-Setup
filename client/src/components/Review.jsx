@@ -75,7 +75,6 @@ return (
     (
       <form className="form"onSubmit={ handleSubmit }>
         <input type="text" onChange={handleChange} value={formValues.name} name={"name"} id='name' placeholder={'Name'} />
-        <br/>
         <select name='rating' id="rating" value={formValues.rating} onChange={handleChange}>
           <option value="1">Worst PC you could buy</option>
           <option value="2">Could be Better</option>
@@ -91,7 +90,6 @@ return (
     ): (
       <form onSubmit={ handleUpdate }>
         <input type="text" onChange={updateHandleChange} value={updatePost?.name} name={"name"} id='name' placeholder={'Name'} />
-        <br/>
         <select name='rating' id="rating" value={updatePost?.rating} onChange={updateHandleChange}>
           <option value="1">Worst PC you could buy</option>
           <option value="2">Could be Better</option>
@@ -107,7 +105,7 @@ return (
       )
     }
     {post?.post?.sort((a,b) => new Date(b.createdAt) - new Date(a.createdAt)).map((post) => (
-      <div key={post._id}>
+      <div className='posts' key={post._id}>
         <h3>Review: {post.review}</h3>
         <p>Rating: {post.rating}</p>
         <p>Name: {post.name}</p>

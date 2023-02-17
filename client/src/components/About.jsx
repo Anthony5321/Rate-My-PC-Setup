@@ -12,6 +12,51 @@ const About = () => {
             <h2>I believe that computers are an essential part of our daily lives, and I want to help you make the most of this powerful tool. My website is dedicated to providing you with valuable information and resources that can help you better understand and utilize your computer.</h2>
             <h2>All these features may not be present yet but, I plan to expand this website to what some could use as a single source of information and feel ready for their fisrt or just another leap into the computer lifestyle.</h2>
             <h1>Thank you for visiting Rate My Pc Setup, and we hope you find our content useful and enjoyable!</h1>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         </div>
     )
   }

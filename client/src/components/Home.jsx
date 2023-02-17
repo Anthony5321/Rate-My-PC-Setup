@@ -20,8 +20,8 @@ useEffect(() => {
 },[])
 
 return(
-  <div>
-    <h2>PC Builds</h2>
+  <div className='home-overall'>
+    <h2 className='title'>PC Builds</h2>
     <section className="container-grid">
       {
         pcs.map((PC) => (

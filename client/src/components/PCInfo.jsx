@@ -23,7 +23,6 @@ useEffect(() => {
   getPcs()
 }, [id])
 
-
 return pc ?(
   <div className="PCs">
     <h2>{pc.title}</h2>
